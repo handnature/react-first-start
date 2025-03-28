@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import Movie from "../components/Movie";
-import Toggle from "../components/Toggle";
 
 function Home() {
     const [loading, setLoading] = useState(true)
@@ -19,8 +18,6 @@ function Home() {
     console.log(movies);
     return (
         <div>
-            <span className="text-red-500 font-bold">Gray</span>
-            <Toggle/>
             <h1>🎬 영화 리스트</h1>
             {loading ? <h1>Loading...</h1> : (
                 <div>{movies.map(movie => (

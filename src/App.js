@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
-import "./index.css";
 
 function App() {
     return <Router>
