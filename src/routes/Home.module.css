@@ -1,0 +1,16 @@
+.container {
+    /*padding: 20px;*/
+}
+
+.movie__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr)); /* 최소 250px, 남는 공간 활용 */
+    gap: 20px; /* 카드 간격 */
+    width: 100%; /* 부모 크기에 맞게 확장 */
+    max-width: 1200px; /* 너무 커지지 않도록 제한 */
+    margin: 0 auto; /* 중앙 정렬 */
+    padding: 0 20px; /* 양쪽 패딩 추가 */
+    justify-content: center; /* 가운데 정렬 */
+    box-sizing: border-box; /* 패딩 포함하여 너비 계산 */
+    overflow: hidden; /* 혹시 모를 넘치는 요소 숨김 */
+}
