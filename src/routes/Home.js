@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import Movie from "../components/Movie";
 import styles from "./Home.module.css"
+import Navbar from "../components/Navbar";
 
 function Home() {
     const [loading, setLoading] = useState(true)
@@ -19,6 +20,7 @@ function Home() {
     console.log(movies);
     return (
         <div className={styles.container}>
+            <Navbar/>
             <h1>🎬 영화 리스트</h1>
             {loading ? <h1>Loading...</h1> : (
                 <div className={styles.movie__container}>{movies.map(movie => (
