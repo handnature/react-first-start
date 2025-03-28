@@ -1,15 +1,21 @@
-import { useState } from "react";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route
+} from "react-router-dom";
+import Home from "./routes/Home";
+import Detail from "./routes/Detail";
+import "./index.css";
 
 function App() {
-  const [counter, setValue] = useState(0);
-  const onClick = () => setValue((prev) => prev + 1);
-  console.log("render");
-  return (
-    <div>
-      <h1>{counter}</h1>
-      <button onClick= {onClick}>click me</button>
-      </div>
-  );
+    return <Router>
+        <Routes>
+            <Route path="/" element={<Home />}>
+            </Route>
+            <Route path="/movie/:id" element={<Detail/>}></Route>
+        </Routes>
+    </Router>;
 }
+
 
 export default App;
